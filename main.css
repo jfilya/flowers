@@ -530,9 +530,7 @@ footer {
   header {
     text-align: center;
   }
-  .image {
-    height: 430px;
-  }
+
   .navigation {
     margin-top: 20px;
     display: block;
@@ -583,6 +581,9 @@ footer {
     margin-top: 40px;
     margin-left: 0;
   }
+  .image button {
+    margin-top: 0px;
+   }
   .foot {
     padding: 0;
     display: flex;
