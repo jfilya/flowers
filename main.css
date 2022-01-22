@@ -4,6 +4,10 @@ body {
   padding: 0;
   background: linear-gradient(to bottom, #c4d1c4, #fff, #c4d1c4, #fff, #c4d1c4),
     no-repeat;
+    position: relative;
+	
+
+	
 }
 h1 {
   display: none;
@@ -310,61 +314,62 @@ footer {
   background: url(img/list4.png) no-repeat;
 }
 
-#wrapper-modal,
-#wrapper-modal2 {
-  width: 100%;
-  height: 100%;
-  display: none;
+
+
+
+
+#wrapper-modal, #wrapper-modal2 {
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
 }
 
 #wrapper-modal.active {
-  display: block;
+    display: block;
 }
 #wrapper-modal2.active {
-  display: block;
+    display: block;
 }
-#overlay,
-#overlay2 {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.863);
-  opacity: 0.7;
+#overlay, #overlay2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.863);
+    opacity: 0.7;
 }
 
-#modal-window,
-#modal-window2 {
-  padding: 30px;
-  position: absolute;
-  top: 120%;
-  width: 1110px;
-  height: 270px;
-  z-index: 2;
-  background: #fff;
-  background-image: url(img/backmail.png);
+#modal-window, #modal-window2 {
+	padding:30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 1110px;
+    height: 270px;
+    z-index: 2;
+	background: #fff;
+    background-image: url(img/backmail.png); 
 }
-#modal-window2 {
-  top: 30%;
+.content , .content2{
+	text-align: center;
 }
-.content,
-.content2 {
-  text-align: center;
+.content p, .content2 p{
+	font-size: 35px;
 }
-.content p,
-.content2 p {
-  font-size: 35px;
+.modal-btn,.modal-btn2 {
+	display: flex;
+	justify-content: center;
 }
-.modal-btn,
-.modal-btn2 {
-  display: flex;
-  justify-content: center;
+#btn-close, #btn-close2{
+	margin:0px;
 }
-#btn-close,
-#btn-close2 {
-  margin: 0px;
-}
+
+
+
+
+
 
 @media screen and (max-width: 1200px) {
   .container {
@@ -419,6 +424,9 @@ footer {
   .image {
     width: 240px;
   }
+  #modal-window, #modal-window2{
+    width: 990px;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -453,12 +461,15 @@ footer {
   .image {
     width: 255px;
   }
-  .cardtwo {
-    margin-top: 0px;
+  .cardtwo{
+	margin-top: 0px;
   }
-  .image {
-    margin-bottom: 30px;
+  .image{
+	margin-bottom: 30px;
   }
+  #modal-window, #modal-window2 {
+    width: 720px;
+}
 }
 @media screen and (max-width: 768px) {
   .container {
@@ -521,6 +532,9 @@ footer {
     flex-wrap: none;
     display: block;
   }
+  #modal-window, #modal-window2 {
+    width: 90%;
+}
 }
 
 @media screen and (max-width: 576px) {
@@ -530,14 +544,13 @@ footer {
   header {
     text-align: center;
   }
-
-  .navigation {
-    margin-top: 20px;
-    display: block;
-    flex-wrap: wrap;
+  .image{
+    height: 430px;
   }
   .navigation {
-    width: 300px;
+    margin-top: 20px;
+  
+    flex-direction: column;
   }
   .logo {
     margin-bottom: 20px;
@@ -581,9 +594,6 @@ footer {
     margin-top: 40px;
     margin-left: 0;
   }
-  .image button {
-    margin-top: 0px;
-   }
   .foot {
     padding: 0;
     display: flex;
@@ -611,5 +621,8 @@ footer {
   }
   .list1 {
     display: none;
+  }
+  #wrapper-modal, #wrapper-modal2{
+    margin-top: -20px;
   }
 }
