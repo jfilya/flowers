@@ -4,10 +4,7 @@ body {
   padding: 0;
   background: linear-gradient(to bottom, #c4d1c4, #fff, #c4d1c4, #fff, #c4d1c4),
     no-repeat;
-    position: relative;
-	
-
-	
+    position: relative;	
 }
 h1 {
   display: none;
